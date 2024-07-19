@@ -38,14 +38,36 @@ do {
 } while (d<5);
 
 // Task 6
-let fact1=1
-let fact2=1
-let fact3 = 5
 
-// console.log(fact2+=fact1);
+function factorial(n) {
+    if (n < 0) {
+        return "Factorial of a negative number doesn't exist.";
+    }
+    
+    let result = 1;
+    let i = n;
 
-do {
-    fact1++
-    fact2*=fact1
-} while (fact3<fact1);
-console.log(fact2);
+    do {
+        result *= i;
+        i--;
+    } while (i > 0);
+
+    return result;
+}
+console.log( factorial(5))
+
+// Task 7
+
+function printPattern(rows) {
+    for (let i = 1; i <= rows; i++) {
+        let pattern = "";
+        for (let j = 1; j <= i; j++) {
+            
+                pattern += "*";
+        }
+        console.log(pattern);
+    }
+}
+
+const numberOfRows = 5; // You can change this value to get a larger or smaller pattern
+printPattern(numberOfRows);
